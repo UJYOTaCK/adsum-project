@@ -34,25 +34,25 @@ export class AppComponent implements OnInit {
   
 
   // algo asi
-    const url = 'URL_DE_TU_ENDPOINT'; // Reemplaza 'URL_DE_TU_ENDPOINT' con la URL real de tu endpoint
-    const data = {
-      // Aquí coloca los datos que deseas enviar en formato JSON
-      clave1: 'valor1',
-      clave2: 'valor2',
-      // Otros datos...
-    };
+    // const url = 'URL_DE_TU_ENDPOINT'; // Reemplaza 'URL_DE_TU_ENDPOINT' con la URL real de tu endpoint
+    // const data = {
+    //   // Aquí coloca los datos que deseas enviar en formato JSON
+    //   clave1: 'valor1',
+    //   clave2: 'valor2',
+    //   // Otros datos...
+    // };
 
-    this.http.post(url, data)
-      .subscribe(
-        response => {
-          console.log('Respuesta:', response);
-          // Manejo de la respuesta del servidor
-        },
-        error => {
-          console.error('Error al enviar la solicitud:', error);
-          // Manejo de errores
-        }
-      );
+    // this.http.post(url, data)
+    //   .subscribe(
+    //     response => {
+    //       console.log('Respuesta:', response);
+    //       // Manejo de la respuesta del servidor
+    //     },
+    //     error => {
+    //       console.error('Error al enviar la solicitud:', error);
+    //       // Manejo de errores
+    //     }
+    //   );
   }
 }
 
