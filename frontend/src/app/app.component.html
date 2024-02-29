@@ -1,0 +1,46 @@
+<main>
+  <header class="bg-success text-white text-center py-4">
+    <h1>Contacto de Soporte !</h1>
+  </header>
+  <br />
+  <div class="container">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="fullName" class="form-label"><strong>Nombre completo</strong></label>
+        <input type="text" class="form-control" id="fullName" formControlName="fullName" required>
+      </div>
+      <div class="mb-3">
+        <label for="companyName" class="form-label"><strong>Nombre de la empresa</strong></label>
+        <input type="text" class="form-control" id="companyName" formControlName="companyName" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label"><strong>Correo electrónico</strong></label>
+        <input type="email" class="form-control" id="email" formControlName="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label"><strong>Teléfono</strong></label>
+        <input type="text" class="form-control" id="phone" formControlName="phone" required>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label"><strong>Categoría</strong></label>
+        <select class="form-select" id="category" formControlName="category" required>
+          <option value="">Seleccionar</option>
+          <option value="Facturación">Facturación</option>
+          <option value="Soporte técnico">Soporte técnico</option>
+          <option value="Ventas">Ventas</option>
+          <option value="Información general">Información general</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label"><strong>Mensaje</strong></label>
+        <textarea class="form-control" id="message" formControlName="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="!contactForm.valid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-check" viewBox="0 0 16 16">
+        <!-- Icono SVG -->
+        </svg>
+        Enviar
+      </button>
+    </form>
+  </div>
+</main>
